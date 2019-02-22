@@ -1,6 +1,6 @@
 # rbx-ObjectHighlighter
 This module allows you to make an object or model act as "Always on Top" and layer over the normal 3D game world.
-
+```--[[
 Imaginaerum (devforum.roblox.com | roblox.com)
 2/21/2019
 
@@ -65,3 +65,4 @@ Methods:
 
   <Tween> TweenColor( <Color3> NewColor, <TweenInfo> TweenInfo)
     -> Same thing as 'ChangeColor', however it smoothly tweens the color of the parts based on the parameters of TweenInfo.
+--]]```
