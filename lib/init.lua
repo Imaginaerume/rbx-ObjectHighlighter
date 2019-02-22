@@ -3,7 +3,7 @@ local TransparencyVisibilityCutoff = 0.1; --How transparent something has to be 
 -----------------------------------------------------------
 --Make sure this module isn't running on the server
 if game:GetService("RunService"):IsServer() then
-	assert("Can't require ObjectHighlight module on the server")
+	print("Can't require ObjectHighlight module on the server")
 	return false
 end
 -----------------------------------------------------------
