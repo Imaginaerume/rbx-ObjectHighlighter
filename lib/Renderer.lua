@@ -1,16 +1,10 @@
-local RenderImplementations = script.Parent.RenderImplementations
-
 local ViewportFrame = require(script.Parent.ViewportFrame)
 local ObjectRefMap = require(script.Parent.ObjectRefMap)
 
+local DEFAULT_IMPLEMENTATION = require(script.Parent.Implementations.worldColor)
+
 local Renderer = {}
 Renderer.__index = Renderer
-
-Renderer.Implementations = {
-	worldColor = require(RenderImplementations.worldColor),
-	highlightColor = require(RenderImplementations.highlightColor),
-	tagged = require(RenderImplementations.tagged),
-}
 
 local function onAddedToStack(self, highlight)
 	local objectRef = ObjectRefMap.fromModel(highlight.target)
@@ -53,7 +47,7 @@ function Renderer.new(targetScreenGui)
 
 	targetScreenGui.IgnoreGuiInset = true
 
-	return state:withRenderImpl(Renderer.Implementations.worldColor)
+	return state:withRenderImpl(DEFAULT_IMPLEMENTATION)
 end
 
 function Renderer:withRenderImpl(implentationFunc)

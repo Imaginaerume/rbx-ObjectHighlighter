@@ -2,6 +2,10 @@ return function()
 	local connections = {}
 
 	return {
+		onBeforeRender = function(_, _)
+			return true
+		end,
+
 		onRender = function(_, worldPart, viewportPart, _)
 			viewportPart.CFrame = worldPart.CFrame
 		end,

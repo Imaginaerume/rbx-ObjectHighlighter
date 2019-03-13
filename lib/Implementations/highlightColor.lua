@@ -1,5 +1,9 @@
 return function()
 	return {
+		onBeforeRender = function(_, _)
+			return true
+		end,
+
 		onRender = function(_, worldPart, viewportPart, highlight)
 			viewportPart.CFrame = worldPart.CFrame
 			viewportPart.Color = highlight.color
