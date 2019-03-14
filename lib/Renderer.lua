@@ -50,8 +50,8 @@ function Renderer.new(targetScreenGui)
 	return state:withRenderImpl(DEFAULT_IMPLEMENTATION)
 end
 
-function Renderer:withRenderImpl(implentationFunc)
-	local resultImpl = implentationFunc()
+function Renderer:withRenderImpl(implementationFunc)
+	local resultImpl = implementationFunc()
 
 	self.onAddedImpl = resultImpl.onAdded
 	self.onRemovedImpl = resultImpl.onRemoved
