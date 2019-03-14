@@ -24,7 +24,7 @@ To provide an generic, sexy, and extendable solution to adopting ViewportFrames 
 
 
 # Code Example
-_Check out our other annotated examples in the `examples` directory!_
+_Check out our other annotated examples in the [`examples`](https://github.com/benbrimeyer/rbx-ObjectHighlighter/tree/master/examples) directory!_
 
 ```lua
 local ObjectHighlighter = require(ReplicatedStorage:FindFirstChild("ObjectHighlighter"))
