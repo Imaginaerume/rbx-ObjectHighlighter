@@ -30,6 +30,8 @@ return function()
 				clearTextures(object)
 				colorObject(object)
 			end
+			clearTextures(viewportPart)
+			colorObject(viewportPart)
 		end,
 	}
 end
