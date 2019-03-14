@@ -1,5 +1,5 @@
 return {
-	Highlight = require(script.Highlight),
-	Renderer = require(script.Renderer),
+	createFromTarget = require(script.createFromTarget),
+	createRenderer = require(script.createRenderer),
 	Implementations = require(script.Implementations),
 }

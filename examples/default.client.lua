@@ -12,11 +12,10 @@ local myScreenGui = Instance.new("ScreenGui")
 myScreenGui.Name = "ObjectHighlighter"
 myScreenGui.Parent = Players.LocalPlayer.PlayerGui
 
-local myRenderer = ObjectHighlighter.Renderer.new(myScreenGui)
+local myRenderer = ObjectHighlighter.createRenderer(myScreenGui)
 
 -- Assume we have a Model as a direct child of Workspace
-local myHighlight = ObjectHighlighter.Highlight.fromTarget(Workspace.Model)
-myHighlight.color = Color3.fromRGB(255, 255, 0)
+local myHighlight = ObjectHighlighter.createFromTarget(Workspace.Model)
 
 -- Apply our highlight object to our Renderer stack.
 -- We can add as many highlight objects to a renderer as we need
