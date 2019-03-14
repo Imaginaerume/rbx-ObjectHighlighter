@@ -15,6 +15,11 @@ This module allows you to make an object or model act as "Always on Top" (or X-R
 # Purpose
 To provide an generic, sexy, and extendable solution to adopting ViewportFrames as a means to render an object on top of a 3D environment.
 
+This is intended to replace older solutions such as [rbx-XRayAdornment](https://github.com/benbrimeyer/rbx-XRayAdornment). Our previous issues with this old xray module is that it made it really hard to balance the state of the target object with the actual rendering process.
+
+There was some difficulty in making a good "only-render-when-obstructed" highlighted object. All attempts were messy and oddly coupled with the creation of the XRayAdornment itself.
+Our philosophy is to separate highlight state from highlight render rules.
+
 # Screenshots
 ![Screenshot of module in action; The user is on Crossroads looking at the silhouette of a house through the side of a wall.](https://i.imgur.com/mwNxmpZ.png)
 *Implementations.highlightColor example*
