@@ -1,5 +1,16 @@
+
+
 # rbx-ObjectHighlighter
 This module allows you to make an object or model act as "Always on Top" (or X-Ray) and layer over the normal 3D game world.
+
+##### Table of Contents
+* [Purpose](#purpose)
+* [Screenshots](#screenshots)
+* [Code Example](#code-example)
+* [API Reference](#api-reference)
+	* [Methods](#methods)
+	* [Renderer](#renderer)
+	* [Render Implementations](#render-implementations)
 
 # Purpose
 To provide an generic, sexy, and extendable solution to adopting ViewportFrames as a means to render an object on top of a 3D environment.
@@ -60,7 +71,7 @@ Returns a Renderer object targeted to the given `targetScreenGui`.
 
 Injects the given `implementationFunc` that will be used by the current Renderer.
 
-You may apply any of ObjectHighlither's pre-built render implementation functions or offer a custom function.
+You may apply any of ObjectHighlighter's pre-built render implementation functions or offer a custom function.
 
 By default, the Renderer will use the `worldColor` implementation.
 
