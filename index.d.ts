@@ -4,18 +4,18 @@ interface IImplementation {
 		onRemoved?: (
 			worldPart: Part,
 			viewportPart: Part,
-			highlight: IHighlight,
+			highlight: Highlight,
 		) => void;
 		onRender: (
 			deltaTime: number,
 			worldPart: Part,
 			viewportPart: Part,
-			highlightState: IHighlight,
+			highlightState: Highlight,
 		) => void;
 		onAdded?: (
 			worldPart: Part,
 			viewportPart: Part,
-			highlight: IHighlight,
+			highlight: Highlight,
 		) => void;
 	};
 }
@@ -25,21 +25,21 @@ interface IImplementations {
 	highlightColor: IImplementation;
 }
 
-declare interface IHighlight {
+declare class Highlight {
 	readonly target: Model;
 	color: Color3;
 	transparency: number;
 }
 
 declare class Renderer {
-	addToStack(highlight: IHighlight): void;
-	removeFromStack(highlight: IHighlight): void;
+	addToStack(highlight: Highlight): void;
+	removeFromStack(highlight: Highlight): void;
 	withRenderImpl(implementationFunc: IImplementation): Renderer;
 	step(deltaTime: number): void;
 }
 
 declare namespace ObjectHighlighter {
-	function createFromTarget(model: Model): IHighlight;
+	function createFromTarget(model: Model): Highlight;
 	function createRenderer(screenGui: ScreenGui): Renderer;
 	const Implementations: IImplementations;
 }
