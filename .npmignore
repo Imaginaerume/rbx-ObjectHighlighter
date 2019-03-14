@@ -1,0 +1,3 @@
+*
+!lib/**/**.lua
+!index.d.ts

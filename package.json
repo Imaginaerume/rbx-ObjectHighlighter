@@ -1,0 +1,29 @@
+{
+  "name": "rbx-objecthighlighter",
+  "version": "2.0.0",
+  "description": "This module allows you to make an object or model act as \"Always on Top\" (or X-Ray) and layer over the normal 3D game world.",
+  "main": "lib/init.lua",
+  "directories": {
+    "example": "examples",
+    "lib": "lib"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Imaginaerume/rbx-ObjectHighlighter.git"
+  },
+  "keywords": [
+    "roblox",
+    "object",
+    "highlighter",
+    "roblox-ts"
+  ],
+  "author": "Imaginaerum",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Imaginaerume/rbx-ObjectHighlighter/issues"
+  },
+  "homepage": "https://github.com/Imaginaerume/rbx-ObjectHighlighter#readme",
+  "devDependencies": {
+    "rbx-types": "^1.0.152"
+  }
+}
