@@ -2,9 +2,13 @@
 	"name": "rbx-ObjectHighlighter",
 	"servePort": 8000,
 	"partitions": {
-	  "src": {
-		"path": "lib",
-		"target": "ReplicatedStorage.ObjectHighlighter"
-	  }
+		"lib": {
+			"path": "lib",
+			"target": "ReplicatedStorage.ObjectHighlighter"
+		},
+		"examples": {
+			"path": "examples",
+			"target": "StarterPlayer.StarterPlayerScripts"
+		}
 	}
-  }
+}
