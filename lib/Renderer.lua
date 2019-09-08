@@ -96,18 +96,20 @@ function Renderer:step(dt)
 		local viewport = self._viewportMap[highlight]
 		local objectRef = viewport:getReference()
 
+		local beforeRenderResult
 		if self.onBeforeRenderImpl then
-			local beforeRenderResult = self.onBeforeRenderImpl(dt, objectRef.worldModel)
+			beforeRenderResult = self.onBeforeRenderImpl(dt, objectRef.worldModel)
 			if beforeRenderResult == false then
 				viewport.rbx.Visible = false
-				return
 			end
 		end
-		for worldPart, viewportPart in pairs(objectRef.map) do
-			self.onRenderImpl(dt, worldPart, viewportPart, highlight)
-		end
-		viewport.rbx.Visible = true
 
+		if beforeRenderResult ~= false then
+			for worldPart, viewportPart in pairs(objectRef.map) do
+				self.onRenderImpl(dt, worldPart, viewportPart, highlight)
+			end
+			viewport.rbx.Visible = true
+		end
 	end
 end
 
